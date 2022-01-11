@@ -11,9 +11,9 @@ from crc16 import crc16xmodem
 from struct import pack
 from traceback import format_exc
 
-
+colors = {'red':'\033[31m', 'blue':'\033[34m', 'green':'\033[32m'}
 inverter_port ='/dev/hidraw0'
-        
+ 
 
 @timeout_decorator.timeout(40, use_signals=False)
 def command(cmd):
